@@ -1,0 +1,57 @@
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -AF'
+alias l='ls -CF'
+alias lr='ls -R'
+alias lt='ls -ltrhF'
+alias lh='ls -lhF'
+alias lu='ls -lutrF'
+
+# TRIUMF ssh aliases
+
+#alias Sshtrc='ssh -X cu@trcomp01.triumf.ca'
+#alias 8piln2='ssh -X tigln08@lnfillserv.triumf.ca'
+#alias Tigln2='ssh -X tigln01@lnfillserv.triumf.ca'
+#alias Labln2='ssh -X tigress@sundance.triumf.ca'
+#alias Tigdaq='ssh -X tigress@midtig06.triumf.ca'
+#alias Labdaq='ssh -X tigscan@midtig03.triumf.ca'
+#alias Tigvac='ssh -X tigsebt3a@isacepics1.triumf.ca'
+#alias Tiglx17='ssh tigress@lxdaq17'
+#alias Sshcupi='ssh cu@192.168.0.193'
+#alias Sshpi='ssh pi@192.168.0.193'
+#alias Pi='ssh pi@culiverpool.dlinkddns.com'
+#alias PiCu='ssh cu@culiverpool.dlinkddns.com'
+#alias NexusS='ssh -p 44605 cu@142.90.84.103'
+#alias Sshdesk='ssh -X cu@192.168.0.197'  # home desktop
+
+alias Indent='indent -i3 -kr -nut -l120'
+alias Sublime='/home/cu/Packages/Sublime\ Text\ 2/sublime_text'
+
+# lets see if this works out...
+alias diff=colordiff
+
+# directory navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+
+# possibly better man page reader:
+#alias man="pinfo -m"
+
+# GEANT4.9.5 cmake - From build directory use "cmakeg [SOURCE DIRECTORY]"
+#alias cmakeg='cmake -DGeant4_DIR=/opt/geant4-install/lib/Geant4-9.6.0'
+#alias g4='source /opt/geant4.9.6.p02-install/bin/geant4.sh'
+
+#Altera Quartus
+#alias Quartus='/media/data1/altera/quartus/bin/quartus'
+
+# launch evince
+#alias ev='evince'
+
+# git
+alias gst='git status'
+alias gfu='git fetch upstream'
+alias gdf='git diff'
+alias gpu='git push'
