@@ -42,7 +42,7 @@ esac
 
 
 # Alias definitions.
-
+alias ls='ls --color=auto' # this here rather than in 'bash_aliases' as OSX doesn't like this option
 if [ -f $DOTFILESDIR/bash_aliases ]; then
     source $DOTFILESDIR/bash_aliases
 fi
