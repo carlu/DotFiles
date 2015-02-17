@@ -1,5 +1,9 @@
 # DotFiles
 
-DotFiles for my various systems.  Should be a subfolder for each system, common things such as aliases should be included from a single file at the top level.
+DotFiles for my various systems.  Starting with bash startups but will expand to include other config files.
 
-Files should be sym-linke to repo on each system.
+* Subfolder for each system. 
+* Common items such as bash aliases should be included from a single file at the top level.
+* Scripts should never fail so include checks to ensure safety. (e.g. check file exists before sourcing).
+
+Files should be sym-linked to the repository from their correct location on each system.
