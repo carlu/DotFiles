@@ -30,10 +30,13 @@ source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-complet
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"     
 export LESS=' -R '
 
+# Trying out liquidprompt instead as of Feb 2015, replaces PS1 redefine below
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/Packages/liquidprompt/liquidprompt
+
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 # export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 2)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 4)\]]\\$ \[$(tput sgr0)\]"
-# Trying out liquidprompt instead as of Feb 2015
-source /Users/cu/Packages/liquidprompt/liquidprompt
+
 
 # attempt at colour output
 export CLICOLOR=1
