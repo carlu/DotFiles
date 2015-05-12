@@ -27,9 +27,11 @@ shopt -s checkwinsize
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 # maybe update this later with liquidprompt but leave for now.
-case "$TERM" in
-    xterm-color) color_prompt=yes;;
-esac
+#case "$TERM" in
+#    xterm-color) color_prompt=yes;;
+#esac
+# Trying out liquidprompt instead as of May 2015
+source /home/cu/Packages/liquidprompt/liquidprompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
