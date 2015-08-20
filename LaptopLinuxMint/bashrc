@@ -1,0 +1,116 @@
+# ~/.bashrc: Hacked together by CU from old Ubuntu bashrc Dec 2012
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# don't put duplicate lines in the history. See bash(1) for more options
+# ... or force ignoredups and ignorespace
+HISTCONTROL=ignoredups:ignorespace
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=5000
+HISTFILESIZE=5000
+HISTTIMEFORMAT='%F %T '  # inlcudes time as well as command and num in history output
+
+# check the window size after each command and, if necessary,
+# update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+# make less more friendly for non-text input files, see lesspipe(1)
+# Taken this line out when trying to get source-highlight to work with less - CU 13 May 13
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set a fancy prompt (non-color, unless we know we "want" color)
+case "$TERM" in
+    xterm-color) color_prompt=yes;;
+esac
+
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+# enable programmable completion features (you don't need to enable
+# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
+# sources /etc/bash.bashrc).
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+    . /etc/bash_completion
+fi
+
+# New root v5.34 30Dec2012 -CU 
+#export ROOTSYS=/home/cu/Packages/root
+# This line kept in from old root install on Ubuntu:
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib/root:$ROOTSYS/include/root
+#This one added this time to get root to run from anywhere (maybe):
+#export PATH=$PATH:/home/cu/Packages/root/bin
+
+# NEw root v5.34.14 in /opt
+#source /opt/root/bin/thisroot.sh
+
+
+# added to get keychain to manage ssh agent and keys
+eval `keychain --eval id_rsa`
+
+# added to configure QuartusII - subscription version, only works when can see license server
+#export LM_LICENSE_FILE=18000@ladd00.triumf.ca
+#export LM_LICENSE_FILE=27000@ladd12
+#export QUARTUS_ROOTDIR=/media/data1/altera8.1/quartus
+#export PATH=$PATH:/media/data1/altera/altera8.1/quartus/bin
+
+#Added for pyroot
+#export PYTHONPATH=$ROOTSYS/lib/root/:$PYTHONPATH
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PYTHONDIR/lib
+
+#added to get scripts folder included in PATH - CU 7 Jan 2013
+export PATH=$PATH:/home/cu/Scripts
+
+#added the folowing for source highlighting in less - CU 13 MAy 13
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
+#added to change default editor, especially to work with git
+export EDITOR=/usr/bin/gedit
+
+# added for midas install 8Aug13
+export MIDASSYS=/opt/midas/
+export MIDAS_EXPTAB=/home/cu/Experiments/exptab
+export MIDAS_EXPT_NAME=test
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/midas/linux/lib
+
+# print time before PS1 prompt
+#export PROMPT_COMMAND="echo -n \[[$(date +%k:%m:%S)]\]"
+
+
+# tab completion for todo.txt
+source /home/cu/Packages/todo.txt-cli/todo_completion
+complete -F _todo Todo
+
+# for /home/PAckages/cheat (https://github.com/chrisallenlane/cheat)
+export CHEATCOLORS=true
+export CHEATPATH=/home/cu/Packages/cheatsheets/
+
+# GRSISpoon
+export GRSISYS=/home/cu/Code/TIGRESS/GRSISpoon
