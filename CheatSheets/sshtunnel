@@ -1,0 +1,6 @@
+# Redirect local port through proxy to port on remote
+ssh -L [Local port]:[remote.com]:[remote port] proxy.com
+
+# e.g. to forward vnc connection to pc01.gateway.com through gateway machine server.gateway.com
+ssh -L 5901:pc01:5900 server.gateway.com
+# then connect to vnc://localhost:5901
