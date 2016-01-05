@@ -60,3 +60,5 @@ else
   echo "keychain not found"
 fi
 
+# set default editor
+export EDITOR=nano
