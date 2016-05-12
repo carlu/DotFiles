@@ -1,4 +1,4 @@
-# bashrc for Ubuntu VM - Carl Unsworth
+# bashrc for Ubuntu1604 VirtualBox  VM - Carl Unsworth
 # --------------------------------------
 
 export DOTFILESDIR="/home/cu/Scripts/DotFiles/"
@@ -26,7 +26,8 @@ HISTTIMEFORMAT='%F %T '  # inlcudes time as well as command and num in history o
 shopt -s checkwinsize
 
 # Use liquidprompt
-source /home/cu/Packages/liquidprompt/liquidprompt
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/Packages/liquidprompt/liquidprompt
 
 # aliases
 alias ls='ls --color=auto' # this here rather than in 'bash_aliases' as OSX doesn't like this option
@@ -50,4 +51,14 @@ export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 # added by carl for ssh key managemment
-eval `keychain --eval id_rsa_Ubuntu1410_VBox`
+# set up ssh keychain
+# nice trick to check if program exists before running.
+# Useful for network accounts. Copied from Stack Overflow (where else!) user lhunath
+if hash keychain 2>/dev/null; then
+  eval `keychain --eval /home/cu/.ssh/id_rsa_VBoxUbuntu1604`
+else
+  echo "keychain not found"
+fi
+
+# set default editor
+export EDITOR=nano
