@@ -48,3 +48,5 @@ source $DOTFILESDIR/bash_aliases
 # set up ssh-agent
 # not needed on MacBook.  Implemented using OS X keyring and ssh-add.
 
+# Cheat color
+export CHEATCOLORS=true

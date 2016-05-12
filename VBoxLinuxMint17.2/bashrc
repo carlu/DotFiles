@@ -62,3 +62,14 @@ fi
 
 # set default editor
 export EDITOR=nano
+#MCNP
+export DATAPATH=/home/cu/Packages/mcnp4c/xs/
+ 
+# PATH for MCNP executables
+export PATH
+PATH="/media/sf_cu/Data/mcnp6/MCNP_CODE/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+ 
+ 
+# Increase the stacksize 
+ulimit -s unlimited
+ 
