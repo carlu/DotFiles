@@ -10,8 +10,8 @@ export DOTFILESDIR="/Users/cu/Scripts/DotFiles/"
 shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=5000
-HISTFILESIZE=5000
+HISTSIZE=10000
+HISTFILESIZE=10000
 HISTTIMEFORMAT='%F %T '  # inlcudes time as well as command and num in history output
 
 # check the window size after each command and, if necessary,
@@ -37,7 +37,6 @@ export LESS=' -R '
 # Custom bash prompt via kirsle.net/wizards/ps1.html
 # export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 2)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 4)\]]\\$ \[$(tput sgr0)\]"
 
-
 # attempt at colour output
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -50,3 +49,8 @@ source $DOTFILESDIR/bash_aliases
 
 # Cheat color
 export CHEATCOLORS=true
+
+# Add Scritps to PATH
+export PATH=$PATH:/Users/cu/Scripts/OSX_PathScripts/
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
