@@ -1,0 +1,16 @@
+# Location of various data sets on work network storage
+
+## Scan data
+
+* BEGe 6530 b15154, 1st scan Apr-May 2015: /net/npr2/d0/cu/
+* BEGe 6530 b15154, 2nd scan Dec-May 2016: /net/nps1/d0/cu/DEC15/
+* SAGe GSW275L 1623, Nov 2014: /net/npr2/d0/cu/SAGe1623
+* SAGe GSW275L 1611, Nov 2014: /net/npr2/d0/SAGe1611
+
+## Simulations
+
+* COMSOL EField Sims: /net/npr3/d0/cu/COMSOL
+
+## VMs
+
+* /net/nps1/d1/cu/VMs/
