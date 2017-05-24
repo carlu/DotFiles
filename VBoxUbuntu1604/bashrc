@@ -62,3 +62,6 @@ fi
 
 # set default editor
 export EDITOR=nano
+
+# Setup for OpenFOAM4
+source /opt/openfoam4/etc/bashrc

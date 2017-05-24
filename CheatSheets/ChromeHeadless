@@ -1,0 +1,15 @@
+# Chrome v59+ Required for headless mode.
+# --disable-gpu required as temporary workaround
+
+# Path on Macbook (installed with "brew install google-chrome-canary"):
+/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary
+
+# Print DOM to terminal
+chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/
+
+# Print page to pdf
+chrome --headless --disable-gpu --print-to-pdf https://www.chromestatus.com/
+chrome --headless --disable-gpu --print-to-pdf file:///Path/To/Local/File
+
+# Grab screenshot
+chrome --headless --disable-gpu --screenshot https://www.chromestatus.com/
