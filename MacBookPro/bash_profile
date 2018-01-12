@@ -1,7 +1,7 @@
 # bash_profile for MacBook.  Carl Unsworth
 #------------------------------------------
 
-export DOTFILESDIR="/Users/cu/Scripts/DotFiles/"
+export DOTFILESDIR="/Users/carlunsworth/Scripts/DotFiles/"
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -51,6 +51,6 @@ source $DOTFILESDIR/bash_aliases
 export CHEATCOLORS=true
 
 # Add Scritps to PATH
-export PATH=$PATH:/Users/cu/Scripts/OSX_PathScripts/
+export PATH=$PATH:/Users/carlunsworth/Scripts/OSX_PathScripts/
 
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
