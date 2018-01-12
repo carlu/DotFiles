@@ -66,6 +66,8 @@ export LESS=' -R '
 
 # add scripts folder to path
 PATH=$PATH:/home/cu/Scripts
+# add local python packages to path
+PATH=$PATH:/home/cu/.local/bin/
 
 # set up ssh keychain
 # nice trick to check if program exists before running.
