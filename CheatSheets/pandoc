@@ -1,0 +1,11 @@
+# Convert Markdown document to pdf
+pandoc -V -o Out.pdf In.md
+
+# Convert Markdown to pdf, setting margin size to 1 inch 
+pandoc -V geometry:margin=1in -o Out.pdf In.md
+
+# Convert markdown doc (file.txt) to rtf
+pandoc -s -f markdown -t rtf -o file.rtf file.txt
+
+# Convert markdown to html, including table of contents and css formatting
+pandoc -s -S -c Style.css --toc In.md -o Out.html

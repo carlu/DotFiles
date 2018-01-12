@@ -1,0 +1,8 @@
+gcalcli list : List calendars
+gcalcli calm : show month calendar
+gcalcli calw : show week calendar
+gcalcli agenda : show 1 week agenda
+gcalcli agenda 8am 9pm : show agenda between times
+gcalcli agenda 8/11/17 : show agenda from 11th august 2017, note american date format
+gcalcli quick --calendar "calendar name" --details url "Test event tonight 9pm" : quick add event
+gcalcli --help : show full help text
