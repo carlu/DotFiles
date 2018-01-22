@@ -50,6 +50,9 @@ source $DOTFILESDIR/bash_aliases
 # Cheat color
 export CHEATCOLORS=true
 
+# Nano for default editor
+export EDITOR=nano
+
 # Add Scritps to PATH
 export PATH=$PATH:/Users/carlunsworth/Scripts/OSX_PathScripts/
 
