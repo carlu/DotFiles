@@ -110,3 +110,6 @@ fi
 # added by carl for less syntaxt highlighting.
 export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
+
+# For cheat 
+export CHEATCOLORS=true
