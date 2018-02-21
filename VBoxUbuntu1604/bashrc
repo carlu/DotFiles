@@ -65,3 +65,8 @@ export EDITOR=nano
 
 # Setup for OpenFOAM4
 source /opt/openfoam4/etc/bashrc
+
+# Add .local/bin to PATH for pip --user installed python modules
+export PATH=$PATH:/home/cu/.local/bin
+
+
