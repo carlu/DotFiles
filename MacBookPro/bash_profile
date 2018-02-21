@@ -34,9 +34,6 @@ export LESS=' -R '
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/Packages/liquidprompt/liquidprompt
 
-# Custom bash prompt via kirsle.net/wizards/ps1.html
-# export PS1="\[$(tput bold)\]\[$(tput setaf 4)\][\[$(tput setaf 2)\]\u\[$(tput setaf 4)\]@\[$(tput setaf 2)\]\h \[$(tput setaf 2)\]\W\[$(tput setaf 4)\]]\\$ \[$(tput sgr0)\]"
-
 # attempt at colour output
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -54,6 +51,7 @@ export CHEATCOLORS=true
 export EDITOR=nano
 
 # Add Scritps to PATH
-export PATH=$PATH:/Users/carlunsworth/Scripts/OSX_PathScripts/
+export PATH=$PATH:/Users/carlunsworth/Scripts/OSX_PathScripts/:/Users/carlunsworth/Library/Python/3.6/bin/
 
+# iTerm Shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
