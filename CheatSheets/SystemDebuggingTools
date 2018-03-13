@@ -1,11 +1,40 @@
-Need to learn these tools:
-* tcpdump
-* strace
+# Tools I need to learn
+
+List of tools I need to learn.  Mostly Linux based tools but many work/exist on OS X too.
+
+## Network related tools
+
+* ping
+	* Also hping
+* nslookup
 * netstat
+* ifconfig
+* tcpdump
+	* wireshark
+* ngrep
 * traceroute
 * netcat
-* ngrep
-* wireshark
-* others, see julia evans blog.
+	* Invoked as nc
+* nftables/iptables
+* iw
+	* command line wifi
+* ethtool
+* nmap
+* whois
+* ip
+* tc
+* arp
+* sysctl
+* paping
+* socat
+
+## Other System Debugging Tools
+
+* lsof
+* strace/ltrace/ftrace (Linux) [dtruss (OS X)]
+* gdb
+* valgrind
+* lttng
+* perf
 
 
