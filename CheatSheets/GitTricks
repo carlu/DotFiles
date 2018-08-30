@@ -1,0 +1,4 @@
+# For ignoring file permisions, useful when working between OSs
+git config core.fileMode false
+
+
