@@ -1,0 +1,21 @@
+# Sublime text keyboard shortcuts
+
+# Go
+
+Ctrl + P		Go to anything
+Ctrl + R		Go to symbol
+Ctrl + G		Go to line
+Ctrl + M		Go to matching
+Ctrl + enter	Go to newline below
+
+# Search 
+
+Ctrl + F		Find
+Ctrl + H		Find and Replace
+
+# Editing
+Alt + Shift + Up/Down	Add cursor above/below
+Ctrl + ]\[				Indent/Unindent
+Ctrl + /				Toggle comment
+
+
