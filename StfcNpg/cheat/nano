@@ -1,0 +1,7 @@
+# Command line options
+
+nano -I: Ignore nanorc file
+
+# Key combinations
+
+Esc + $: Toggle soft wrapping

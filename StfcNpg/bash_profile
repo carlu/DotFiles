@@ -1,0 +1,4 @@
+# Carl Unsworth Bash profile for Daresbury Lab Nuclear Group Network
+
+# source bashrc if it exists. Other config is in there
+[[ -r ~/.bashrc ]] && . ~/.bashrc

@@ -1,0 +1,22 @@
+# Linux man pages
+
+man [command name]
+man [section number] [command name]
+man -a [command name] (Shows all sections)
+
+# Sections
+
+1 	General Commands
+2 	System Calls
+3 	Library functions, covering in particular the C standard library
+4 	Special files (usually devices, those found in /dev) and drivers
+5 	File formats and conventions
+6 	Games and screensavers
+7 	Miscellanea
+8 	System administration commands and daemons
+
+# Useful pages
+man 7 ascii
+man 7 utf-8
+
+See /etc/man_db.conf for list of all man page locations.

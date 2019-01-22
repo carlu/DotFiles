@@ -1,0 +1,12 @@
+# Notes on Linux file timestamps
+
+* atime
+	* Access time - last time file was accessed.
+	* ls -ltu to list folder contents by atime.
+* mtime
+	* Modify time - last time file was changed by editing.
+	* ls -lt to list folder contents by mtime.
+* ctime
+	* Change time - last time file metadata were changed.
+	* Includes perms, times, owner, location.
+	* ls -lct to list folder contents by ctime.

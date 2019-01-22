@@ -1,0 +1,3 @@
+# Proxies for connecting to Liverpool
+Host npdaq*
+	ProxyCommand ssh cu@ns.ph.liv.ac.uk  -W %h:%p
