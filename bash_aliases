@@ -1,16 +1,19 @@
 # some ls aliases
-alias ll='ls -AlF'
-alias la='ls -AF'
-alias l='ls -CF'
-alias lr='ls -R'
-alias lt='ls -ltrhF'
-alias lh='ls -lhF'
-alias lu='ls -lutrF'
+alias ls='ls --color=auto'
+alias ll='ls -AlF --color=auto'
+alias la='ls -AF --color=auto'
+alias l='ls -CF --color=auto'
+alias lr='ls -R --color=auto'
+alias lt='ls -ltrhF --color=auto'
+alias lh='ls -lhF --color=auto'
+alias lu='ls -lutrF --color=auto'
 
 alias Indent='indent -i3 -kr -nut -l120'
 
-# lets see if this works out...
-alias diff=colordiff
+# If exists, diff=colordiff
+if [ -x "$(command -v colordiff)" ]; then
+  alias diff="colordiff"
+fi
 
 # directory navigation
 alias ..="cd .."
@@ -19,15 +22,21 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 
-# GEANT4.9.5 cmake - From build directory use "cmakeg [SOURCE DIRECTORY]"
-#alias cmakeg='cmake -DGeant4_DIR=/opt/geant4-install/lib/Geant4-9.6.0'
-#alias g4='source /opt/geant4.9.6.p02-install/bin/geant4.sh'
+# Ignore nanorc for old nano versions since syntax files stored
+# in ~/.nano/ are incompatible. Nano 2.3.1 is okay, 2.0.9 is not.
+# Following should allow minor numbers >=3 and major >2 for future versions
+NanoMinor=`nano -V | head -n 1 | awk '{print $4}' | awk -F "." '{print $2}'`
+NanoMajor=`nano -V | head -n 1 | awk '{print $4}' | awk -F "." '{print $1}'`
+if [ $NanoMinor \< 3 ]
+then
+    if [ $NanoMajor \< 3 ]
+    then
+        alias nano="nano -I"
+    fi
+fi
 
-#Altera Quartus
-#alias Quartus='/media/data1/altera/quartus/bin/quartus'
+# Pipe tclsh through readline if "rlwrap" exists
+if [ -x "$(command -v rlwrap)" ]; then
+  alias tclsh="rlwrap tclsh"
+fi
 
-# git
-alias gst='git status'
-alias gfu='git fetch upstream'
-alias gdf='git diff'
-alias gpu='git push'
