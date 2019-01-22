@@ -1,0 +1,37 @@
+set autoindent
+set smarthome
+set smooth
+set tabsize 4
+set const
+
+include /home/tjm/.nano/asm.nanorc	 
+include /home/tjm/.nano/mutt.nanorc
+include /home/tjm/.nano/awk.nanorc	 
+include /home/tjm/.nano/nanorc.nanorc
+include /home/tjm/.nano/cmake.nanorc
+include /home/tjm/.nano/objc.nanorc
+include /home/tjm/.nano/c.nanorc	
+include /home/tjm/.nano/ocaml.nanorc
+include /home/tjm/.nano/css.nanorc	
+include /home/tjm/.nano/patch.nanorc
+include /home/tjm/.nano/debian.nanorc
+include /home/tjm/.nano/perl.nanorc
+include /home/tjm/.nano/fortran.nanorc	 
+include /home/tjm/.nano/php.nanorc
+include /home/tjm/.nano/gentoo.nanorc
+include /home/tjm/.nano/pov.nanorc
+include /home/tjm/.nano/groff.nanorc
+include /home/tjm/.nano/python.nanorc
+include /home/tjm/.nano/html.nanorc	
+include /home/tjm/.nano/ruby.nanorc
+include /home/tjm/.nano/java.nanorc	
+include /home/tjm/.nano/sh.nanorc
+include /home/tjm/.nano/lua.nanorc	
+include /home/tjm/.nano/spec.nanorc
+include /home/tjm/.nano/makefile.nanorc  
+include /home/tjm/.nano/tcl.nanorc
+include /home/tjm/.nano/man.nanorc	
+include /home/tjm/.nano/tex.nanorc
+include /home/tjm/.nano/mgp.nanorc	 
+include /home/tjm/.nano/xml.nanorc
+
