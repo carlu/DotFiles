@@ -48,5 +48,5 @@ fi
 # setup path for cheat sheets
 export DEFAULT_CHEAT_DIR='~/.cheat/'
 export CHEATPATH='$CHEATPATH:/home/tjm/Documents/Notes/Computing/Gerneral:/home/tjm/Documents/Notes/Computing/npg_network'
-  
+export CHEATCOLORS=true  
 
