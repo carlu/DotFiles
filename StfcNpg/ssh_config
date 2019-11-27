@@ -1,3 +1,12 @@
 # Proxies for connecting to Liverpool
 Host npdaq*
 	ProxyCommand ssh cu@ns.ph.liv.ac.uk  -W %h:%p
+
+# Keep connections alive
+Host *
+	ServerAliveInterval 120
+
+# Proxy for ISOL system in cleanroom Liverpool
+#Host 138.253.148.174
+#  ProxyCommand ssh cu@ns.ph.liv.ac.uk -W %h:%p
+  

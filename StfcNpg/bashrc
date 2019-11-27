@@ -3,6 +3,7 @@
 # Local installs to path
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/Packages/todo.txt-cli/
+export PATH=$PATH:~/Packages/
 export PATH=$PATH:~/Scripts/
 
 # Usefull env vars
@@ -10,7 +11,12 @@ export EDITOR=nano
 
 # User, host, time into prompt
 #export PS1='\[\e[31m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\] \[\e[32m\]\A\[\e[0m\] \W $ '
-export PS1='\[\e[31m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\] \[\e[32m\]\A\[\e[0m\] \W $ '
+#export PS1='\[\e[31m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\] \[\e[32m\]\A\[\e[0m\] \W $ '
+#export PS1="\u@\h \@ \w \\$\[$(tput sgr0)\]"
+if [[ $- == *i* ]]
+then
+	export PS1="\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;6m\]\h\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;2m\]\A\[$(tput sgr0)\]\[\033[38;5;15m\] \w \[$(tput sgr0)\]\[\033[38;5;14m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+fi
 
 # Allow bash tab completion in interactive shells
 if ! shopt -oq posix; then
@@ -47,6 +53,22 @@ fi
 
 # setup path for cheat sheets
 export DEFAULT_CHEAT_DIR='~/.cheat/'
-export CHEATPATH='$CHEATPATH:/home/tjm/Documents/Notes/Computing/Gerneral:/home/tjm/Documents/Notes/Computing/npg_network'
+if [ -z "$CHEATPATH" ]
+then
+	export CHEATPATH=$CHEATPATH:/home/tjm/Documents/Notes/Computing/General:/home/tjm/Documents/Notes/Computing/npg_network:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
+else
+	export CHEATPATH=/home/tjm/Documents/Notes/Computing/General:/home/tjm/Documents/Notes/Computing/npg_network:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
+fi
+export CHEAT_PATH=$CHEATPATH
 export CHEATCOLORS=true  
 
+# Function to view cheatsheets with less, useful for longer documents
+function cheatl() {
+  cheat $1 | less
+}
+
+# Tab completion for cheatl using existing function for cheat
+complete -F _cheat_autocomplete cheatl
+ 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
