@@ -1,0 +1,52 @@
+# Carl Unsworth bashrc for Daresbury Lab Nuclear Group Network
+
+# Local installs to path
+export PATH=$PATH:~/.local/bin/
+export PATH=$PATH:~/Packages/todo.txt-cli/
+export PATH=$PATH:~/Scripts/
+
+# Usefull env vars
+export EDITOR=nano
+
+# User, host, time into prompt
+#export PS1='\[\e[31m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\] \[\e[32m\]\A\[\e[0m\] \W $ '
+export PS1='\[\e[31m\]\u\[\e[0m\]@\[\e[34m\]\h\[\e[0m\] \[\e[32m\]\A\[\e[0m\] \W $ '
+
+# Allow bash tab completion in interactive shells
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+# Aliases
+source ~/.bash_aliases
+
+# don't put duplicate lines or lines starting with space in the history.
+# See bash(1) for more options
+HISTCONTROL=ignoreboth
+
+# append to the history file, don't overwrite it
+shopt -s histappend
+
+# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+HISTSIZE=100000
+HISTFILESIZE=100000
+HISTTIMEFORMAT='%F %T '  # inlcudes time as well as command and num in history output
+
+# update history file immediately
+export PROMPT_COMMAND='history -a'
+
+# Use source-highlight with less if it is installed
+if [ -x "$(command -v source-highlight)" ]; then
+  export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+  export LESS=' -R '
+fi
+
+# setup path for cheat sheets
+export DEFAULT_CHEAT_DIR='~/.cheat/'
+export CHEATPATH='$CHEATPATH'
+  
+
