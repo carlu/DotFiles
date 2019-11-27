@@ -69,6 +69,9 @@ function cheatl() {
 
 # Tab completion for cheatl using existing function for cheat
 complete -F _cheat_autocomplete cheatl
- 
 
+# License server for Xilinx Vivado
+export LM_LICENSE_FILE=27000@te0dllic01
+ 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
