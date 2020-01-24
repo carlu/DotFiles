@@ -72,6 +72,12 @@ complete -F _cheat_autocomplete cheatl
 
 # License server for Xilinx Vivado
 export LM_LICENSE_FILE=27000@te0dllic01
+
+# Set up ssh-agent
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval `ssh-agent`
+    ssh-add
+fi
  
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
