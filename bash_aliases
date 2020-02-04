@@ -7,6 +7,7 @@ alias lr='ls -R --color=auto'
 alias lt='ls -ltrhF --color=auto'
 alias lh='ls -lhF --color=auto'
 alias lu='ls -lutrF --color=auto'
+alias lar='ls -lhaR --color=auto'
 
 alias Indent='indent -i3 -kr -nut -l120'
 
