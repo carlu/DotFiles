@@ -1,0 +1,9 @@
+# Carl Unsworth Bash profile for Daresbury Lab Nuclear Group Network
+
+# bash_profile is run on "log in shells", bashrc on "interactive shells"
+# sourcing bashrc here can cause problmes with Gnome graphical login,
+#	I think that's due to ssh-agent stuff
+# not sourcing bashrc means it isn't used when connecting to this machine by SSH.
+# Since this is a laptop I will not source for now but no satisfactory solution 
+#	so far for e.g. work desktop.
+#[[ -r ~/.bashrc ]] && . ~/.bashrc
