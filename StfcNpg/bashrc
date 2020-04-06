@@ -61,9 +61,9 @@ fi
 export DEFAULT_CHEAT_DIR='~/.cheat/'
 if [ -z "$CHEATPATH" ]
 then
-	export CHEATPATH=$CHEATPATH:/home/tjm/Documents/Notes/Computing/General:/home/tjm/Documents/Notes/Computing/npg_network:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
+	export CHEATPATH=$CHEATPATH:/home/tjm/Documents/Notes/Computing/:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
 else
-	export CHEATPATH=/home/tjm/Documents/Notes/Computing/General:/home/tjm/Documents/Notes/Computing/npg_network:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
+	export CHEATPATH=/home/tjm/Documents/Notes/Computing:/home/tjm/Documents/Notes/DAQ/:/home/tjm/Documents/Notes/Projects/
 fi
 export CHEAT_PATH=$CHEATPATH
 export CHEATCOLORS=true  
