@@ -62,8 +62,8 @@ if [ -x "$(command -v source-highlight)" ]; then
 fi
 
 # setup path for cheat sheets
-export DEFAULT_CHEAT_DIR='~/.cheat/'
-export CHEATPATH='$CHEATPATH:~/Documents/Notes/Computing/Gerneral:~/Documents/Notes/Computing/npg_network'
+export CHEAT_CONFIG_PATH="/home/tjm/DotFiles/StfcFedoraLaptop/cheat_conf.yaml"
+export CHEAT_USE_FZF=true
 
 # Set up ssh-agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
@@ -75,3 +75,6 @@ if [ -x "$(command -v /usr/bin/keychain)" ]; then
     /usr/bin/keychain $HOME/.ssh/id_rsa
     source $HOME/.keychain/$HOSTNAME-sh
 fi
+
+# Added by fzf install script:
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
