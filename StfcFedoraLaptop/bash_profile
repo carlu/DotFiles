@@ -7,3 +7,4 @@
 # Since this is a laptop I will not source for now but no satisfactory solution 
 #	so far for e.g. work desktop.
 #[[ -r ~/.bashrc ]] && . ~/.bashrc
+

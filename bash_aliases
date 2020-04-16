@@ -32,7 +32,9 @@ if [ $NanoMinor \< 3 ]
 then
     if [ $NanoMajor \< 3 ]
     then
-        alias nano="nano -I"
+        alias nano="nano -Ic"
+    else
+        alias nano="nano -c"
     fi
 fi
 

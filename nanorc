@@ -2,7 +2,6 @@ set autoindent
 set smarthome
 set smooth
 set tabsize 4
-set const
 
 include /home/tjm/.nano/asm.nanorc	 
 include /home/tjm/.nano/mutt.nanorc
