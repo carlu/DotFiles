@@ -18,6 +18,7 @@ export PATH
 # User specific stuff
 
 # Local installs to path
+export PATH=$PATH:/usr/local/go/bin/
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/Packages/todo.txt-cli/
 export PATH=$PATH:~/Scripts/
