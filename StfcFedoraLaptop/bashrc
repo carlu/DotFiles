@@ -1,4 +1,5 @@
 # Carl Unsworth bashrc for Daresbury Lab Nuclear Group Network
+export SOURCEDSCRIPTS=$SOURCEDSCRIPTS:.bashrc
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
