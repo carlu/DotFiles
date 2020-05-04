@@ -1,3 +1,9 @@
+
+# Track which startjup files have been sourced.
+# Stops me having to keep looking up which files are sourced when
+# Also useful to add similar line to other home and /etc/startup scripts
 export SOURCEDSCRIPTS=$SOURCEDSCRIPTS:.profile
+
+# Add bin folder for manually installed golang
 export PATH=$PATH:/usr/local/go/bin
 

@@ -1,4 +1,8 @@
 # Carl Unsworth bashrc for Daresbury Lab Nuclear Group Network
+
+# Track which startjup files have been sourced.
+# Stops me having to keep looking up which files are sourced when
+# Also useful to add similar line to other home and /etc/startup scripts
 export SOURCEDSCRIPTS=$SOURCEDSCRIPTS:.bashrc
 
 # Source global definitions

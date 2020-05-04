@@ -1,5 +1,10 @@
 # Carl Unsworth bashrc for Daresbury Lab Nuclear Group Network
 
+# Track which startup files have been sourced.
+# Stops me having to keep looking up which files are sourced when
+# Also useful to add similar line to other home and /etc/startup scripts
+export SOURCEDSCRIPTS=$SOURCEDSCRIPTS:.bashrc
+
 # Local installs to path
 export PATH=$PATH:~/.local/bin/
 export PATH=$PATH:~/Packages/todo.txt-cli/
