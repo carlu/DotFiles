@@ -50,8 +50,8 @@ if [ -x "$(command -v source-highlight)" ]; then
   export LESS=' -R '
 fi
 
-# setup path for cheat sheets
-export DEFAULT_CHEAT_DIR='~/.cheat/'
-export CHEATPATH='$CHEATPATH'
-  
-
+# setup cheat
+export CHEAT_CONFIG_PATH="/home/dave/DotFiles/hal-9000/cheat_conf.yaml"
+export CHEAT_USE_FZF=true  
+ 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
